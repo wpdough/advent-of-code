@@ -17,6 +17,7 @@
     <modules>
         <module>d1-report-repair</module>
         <module>d2-password-philosophy</module>
+        <module>d3-toboggan-trajectory</module>
     </modules>
 
 </project>
