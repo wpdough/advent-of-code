@@ -18,6 +18,7 @@
         <module>d1-report-repair</module>
         <module>d2-password-philosophy</module>
         <module>d3-toboggan-trajectory</module>
+        <module>d4-passport-processing</module>
     </modules>
 
 </project>
