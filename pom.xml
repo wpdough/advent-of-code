@@ -19,6 +19,7 @@
         <module>d2-password-philosophy</module>
         <module>d3-toboggan-trajectory</module>
         <module>d4-passport-processing</module>
+        <module>d5-binary-boarding</module>
     </modules>
 
 </project>
