@@ -21,6 +21,15 @@
         <module>d4-passport-processing</module>
         <module>d5-binary-boarding</module>
         <module>d7-handy-haversacks</module>
+        <module>d8-handheld-halting</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>
