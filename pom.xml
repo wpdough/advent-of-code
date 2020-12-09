@@ -22,6 +22,8 @@
         <module>d5-binary-boarding</module>
         <module>d7-handy-haversacks</module>
         <module>d8-handheld-halting</module>
+        <module>d9-encoding-error</module>
+        <module>problem-api</module>
     </modules>
 
     <dependencies>
