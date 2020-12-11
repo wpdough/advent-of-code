@@ -24,6 +24,7 @@
         <module>d8-handheld-halting</module>
         <module>d9-encoding-error</module>
         <module>problem-api</module>
+        <module>d10-adapter-array</module>
     </modules>
 
     <dependencies>
