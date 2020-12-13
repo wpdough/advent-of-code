@@ -27,6 +27,7 @@
         <module>d10-adapter-array</module>
         <module>d11-seating-system</module>
         <module>d12-rain-risk</module>
+        <module>d13-shuttle-search</module>
     </modules>
 
     <dependencies>
