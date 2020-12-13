@@ -48,20 +48,38 @@ public class SeatingChart {
     public int countOccupiedAdj(int x, int y) {
         int occupied = 0;
         for (Direction dir : Direction.values()) {
-            if (seatOccupied(x, y, dir)) {
+            if (seatOccupiedAdjacent(x, y, dir)) {
                 occupied++;
             }
         }
         return occupied;
     }
 
-    public boolean seatOccupied(int x, int y, Direction dir) {
+    public boolean seatOccupiedAdjacent(int x, int y, Direction dir) {
         int translatedX = dir.getTranslateX() + x;
         int translatedY = dir.getTranslateY() + y;
         if (valid(translatedX, translatedY) && getState(translatedX, translatedY).equals(SpaceState.OCCUPIED)) {
             return true;
         }
         return false;
+    }
+
+    public int countOccupiedVisible(int x, int y) {
+        int occupied = 0;
+        for (Direction dir : Direction.values()) {
+            if (seatOccupiedVisible(x, y, dir)) {
+                occupied++;
+            }
+        }
+        return occupied;
+    }
+
+    public boolean seatOccupiedVisible(int x, int y, Direction dir) {
+        int translatedX = dir.getTranslateX() + x;
+        int translatedY = dir.getTranslateY() + y;
+        if (!valid(translatedX, translatedY) || getState(translatedX, translatedY).equals(SpaceState.EMPTY))
+            return false;
+        return getState(translatedX, translatedY).equals(SpaceState.OCCUPIED) || seatOccupiedVisible(translatedX, translatedY, dir);
     }
 
     private boolean valid(int x, int y) {

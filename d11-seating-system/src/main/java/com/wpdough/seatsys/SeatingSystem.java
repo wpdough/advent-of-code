@@ -27,7 +27,12 @@ public class SeatingSystem extends AocProblem<SeatingChart> {
 
     @Override
     public long partTwo(SeatingChart chart) {
-        return 0;
+
+        while (applySeatingRulesTwo(chart) != 0) {
+            chart.print();
+        }
+
+        return chart.countOccupiedSeats();
     }
 
     private static int applySeatingRules(SeatingChart chart) {
@@ -39,6 +44,25 @@ public class SeatingSystem extends AocProblem<SeatingChart> {
                 }
 
                 if (chart.getState(x, y).equals(SpaceState.OCCUPIED) && chart.countOccupiedAdj(x, y) >= 4) {
+                    changes.put(new Point(x, y), SpaceState.EMPTY);
+                }
+            }
+        }
+
+        changes.forEach((coord, state) -> chart.setState(coord.x, coord.y, state));
+
+        return changes.size();
+    }
+
+    private static int applySeatingRulesTwo(SeatingChart chart) {
+        Map<Point, SpaceState> changes = new HashMap<>();
+        for (int x = 0; x < chart.getColumns(); x++) {
+            for (int y = 0; y < chart.getRows(); y++) {
+                if (chart.getState(x, y).equals(SpaceState.EMPTY) && chart.countOccupiedVisible(x, y) == 0) {
+                    changes.put(new Point(x, y), SpaceState.OCCUPIED);
+                }
+
+                if (chart.getState(x, y).equals(SpaceState.OCCUPIED) && chart.countOccupiedVisible(x, y) >= 5) {
                     changes.put(new Point(x, y), SpaceState.EMPTY);
                 }
             }
