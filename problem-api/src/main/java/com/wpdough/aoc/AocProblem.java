@@ -19,6 +19,7 @@ public abstract class AocProblem<T> {
                 .collect(Collectors.toList());
         T input = parseInput(fileLines);
         System.out.println(partOne(input));
+        input = parseInput(fileLines);
         System.out.println(partTwo(input));
     }
 }

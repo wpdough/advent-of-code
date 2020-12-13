@@ -25,6 +25,7 @@
         <module>d9-encoding-error</module>
         <module>problem-api</module>
         <module>d10-adapter-array</module>
+        <module>d11-seating-system</module>
     </modules>
 
     <dependencies>
