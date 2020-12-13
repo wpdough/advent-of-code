@@ -26,6 +26,7 @@
         <module>problem-api</module>
         <module>d10-adapter-array</module>
         <module>d11-seating-system</module>
+        <module>d12-rain-risk</module>
     </modules>
 
     <dependencies>
