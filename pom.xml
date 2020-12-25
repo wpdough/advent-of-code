@@ -28,6 +28,7 @@
         <module>d11-seating-system</module>
         <module>d12-rain-risk</module>
         <module>d13-shuttle-search</module>
+        <module>d14-docking-data</module>
     </modules>
 
     <dependencies>
