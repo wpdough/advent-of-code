@@ -10,7 +10,7 @@ import lombok.ToString;
 public class Instruction {
     private InstructionType type;
     private String bitmask;
-    private int address;
+    private long address;
     private long value;
 
     public static Instruction parse(String input) {
@@ -21,7 +21,7 @@ public class Instruction {
         } else if (type.equals(InstructionType.WRITE_VALUE)) {
             String addressStr = input.substring(input.indexOf("[") + 1, input.indexOf("]"));
             String valueStr = input.replace("mem[" + addressStr + "] = ", "");
-            return new Instruction(type, null, Integer.parseInt(addressStr), Integer.parseInt(valueStr));
+            return new Instruction(type, null, Long.parseLong(addressStr), Long.parseLong(valueStr));
         }
         return null;
     }
