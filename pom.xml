@@ -31,6 +31,7 @@
         <module>d14-docking-data</module>
         <module>d15-rambunctious-recitation</module>
         <module>d16-ticket-translation</module>
+        <module>d18-operation-order</module>
     </modules>
 
     <dependencies>
